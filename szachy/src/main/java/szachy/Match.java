@@ -19,8 +19,8 @@ public class Match {
         } else if (result == -1) {
             player2.addPoints(1);
         } else {
-            player1.addPoints(0);
-            player2.addPoints(0);
+            player1.addPoints(0.5);
+            player2.addPoints(0.5);
         }
     }
 

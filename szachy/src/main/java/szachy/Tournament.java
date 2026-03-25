@@ -34,7 +34,7 @@ public class Tournament {
  private final Set<Player> byePlayers = new HashSet<>();
 
  List<Match> pairPlayers() {
-     players.sort(Comparator.comparingInt(Player::getPoints).reversed());
+     players.sort(Comparator.comparingDouble(Player::getPoints).reversed());
      List<Match> matches = new ArrayList<>();
      Set<Player> paired = new HashSet<>();
      List<Player> unpaired = new ArrayList<>(players);
@@ -81,7 +81,7 @@ public class Tournament {
 
     private void printStandings() {
         System.out.println("Standings:");
-        players.sort(Comparator.comparingInt(Player::getPoints).reversed());
+        players.sort(Comparator.comparingDouble(Player::getPoints).reversed());
         for (Player p : players) {
             System.out.println(p.getName() + ": " + p.getPoints());
         }
@@ -91,7 +91,7 @@ public class Tournament {
 
 public java.util.List<Player> getPlayersSorted() {
     java.util.List<Player> sorted = new java.util.ArrayList<>(players);
-    sorted.sort(java.util.Comparator.comparingInt(Player::getPoints).reversed());
+    sorted.sort(java.util.Comparator.comparingDouble(Player::getPoints).reversed());
     return sorted;
 }
 

@@ -2,7 +2,7 @@ package szachy;
 
 public class Player {
     private final String name;
-    private int points;
+    private double points;
 
     public Player(String name) {
         this.name = name;
@@ -13,7 +13,7 @@ public class Player {
         return name;
     }
 
-    public int getPoints() {
+    public double getPoints() {
         return points;
     }
 
